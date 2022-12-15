@@ -14,13 +14,13 @@
 
 <nav class="navbar">
     <div class="links">
-            <a class="logo" href="">
+            <a class="logo" href="/Pet_Store">
                 <img alt="logo" src="${pageContext.request.contextPath}/resources/imgs/Cat logo.png" width="30" height="30">
                 Pet Store
             </a>
         <div class="options">
             <ul>
-                <li><a href="/Test">Home</a></li>
+                <li><a href="/Pet_Store">Home</a></li>
                 <li><a href="#">Food</a></li>
                 <li><a href="#">Toys</a></li>
                 <li><a href="">Menu</a>

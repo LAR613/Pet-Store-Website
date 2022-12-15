@@ -14,36 +14,37 @@
 		http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<!--  Paquete a escanear en busca de componentes -->
+	<!-- Package to scan for components -->
 	<context:component-scan base-package="petstore" />
 
 	<mvc:annotation-driven/>
 
-	<!-- Configuracion del view resolver-->
+	<!-- View configuration -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<!--Se le indica a Spring la ubicacíon de los recursos externos-->
+	<!-- Tells Spring the location of external resources -->
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 	
-	<!-- Origen BBDD y connection pool -->
+	<!-- BBDD origin and connection pool -->
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/registroUsuarios?useSSL=false&amp;serverTimezone=UTC" />
+        <!-- Change this line for connecting to the database. Add the port and the database name -->
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/userRegistration?useSSL=false&amp;serverTimezone=UTC" />
         <property name="user" value="root" />
         <property name="password" value="0" /> 
 
-        <!-- Propiedades connection pool para C3P0 -->
+        <!-- Connection pool properties for C3P0 -->
         <property name="minPoolSize" value="5" />
         <property name="maxPoolSize" value="20" />
         <property name="maxIdleTime" value="30000" />
 	</bean>  
 	
-    <!--  Configuración Hibernate session factory -->
+    <!-- Hibernate session factory configuration -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
@@ -56,13 +57,13 @@
 		</property>
    </bean>	  
 
-    <!--  Configuración Hibernate transaction manager -->
+    <!-- Hibernate transaction manager configuration -->
 	<bean id="miTransactionManager"
             class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     
-    <!-- Habilitar configuración de transacciones basadas en anotaciones -->
+    <!-- Enable annotation-based transaction configuration -->
 	<tx:annotation-driven transaction-manager="miTransactionManager" />
 	
 

@@ -8,12 +8,15 @@
     --color-yellow-hover: #f3b90b;
     --color-red-errors: #c92432;
     --color-green: #5dd15d;
+    
 }
 
 *{
+	
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
@@ -23,16 +26,21 @@ body{
     max-width: 1200px;
     margin: auto;
     background-color: rgba(253, 250, 244, 0.959);
+    
 }
 
 ul{
+	
     list-style: none;
+    
 }
 
 a{
+	
     color: white;
     font-size: 20px;
     text-decoration: none;
+    
 }
 
 
@@ -44,13 +52,13 @@ a{
     justify-content: space-between;
     align-items: center;
 
-    
 } 
 
 .links{
 
     display: flex;
     align-items: center;
+    
 }
 
 .options a{
@@ -68,7 +76,6 @@ a{
 .options > ul{
 
     display: flex;
-    /*For the options menu to be completely even, delete the line below*/
     width: 280px;
 
 }
@@ -76,7 +83,7 @@ a{
 .options li{
 
     position: relative;
-    width: 6.5rem;/*or 150px should work*/
+    width: 6.5rem;
   
 }
 
@@ -85,12 +92,13 @@ a{
     display: block;
     top: 0;
 
-  }
+}
 
 .dropdown-menu li{
 
     display: none;
     position: relative;
+    
 }
 
 .dropdown-menu{
@@ -113,6 +121,7 @@ a{
 
     background-color: var(--color-yellow-hover);
     transition: 0.3s;
+    
 }
 
 .logo{
@@ -136,6 +145,7 @@ a{
 
     color: var(--color-blue-hover);
     transition: 0.3s;
+    
 }
 
 .user-register input[type=text]{
@@ -164,6 +174,7 @@ input[type=submit]{
 input[type=submit]:hover {
 
     background-color: var(--color-blue-hover);
+    
 }
 
 /*CATS PLAYING IMAGE*/
@@ -200,14 +211,14 @@ section > h2{
     gap: 1rem;
     padding: 0 1rem 1rem;
     overflow-x: auto;
-    overscroll-behavior-inline: contain;    
+    overscroll-behavior-inline: contain;   
+     
 }
 
 .media-element{
 
     padding: 1rem;
     background: white;
-    /*New Stuff*/
     margin-top: 3vh;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 12px;
@@ -218,8 +229,8 @@ section > h2{
 .media-element:hover{
 
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
 }
-
 
 .media-element > img{
 
@@ -266,6 +277,7 @@ section > h2{
 .icons img:hover{
 
     background-color: var(--color-yellow-hover);
+    
 }
 
 
@@ -284,7 +296,6 @@ section > h2{
     padding-bottom: 3vh;
     background-color: white;
 
-
 }
 
 .social-links ion-icon {
@@ -293,9 +304,116 @@ section > h2{
     height: 50px;
     color: var(--color-blue);
     padding: 1rem;
+    
 }
 
 .social-links ion-icon:hover{
 
     color: var(--color-blue-hover);
+    
+}
+
+/*FORM*/
+
+form{
+
+    max-width: 500px;
+    background-color: white;
+    margin: 2rem auto;
+
+}
+
+.title{
+    
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px 0;
+    color: var(--color-yellow);
+
+}
+
+hr{
+
+    border: 1px solid var(--color-yellow);  
+    margin: 0 20px 20px; 
+
+}
+
+.form-group{
+
+    display: grid;
+    grid-template-columns: 100px 400px;
+    align-items: center;
+    
+}
+
+.form-group label{
+
+    font-size: 14px;
+    margin-left: 10px;
+
+} 
+
+.input{
+
+    padding: 8px;
+    margin: 8px 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    
+}
+
+.form-group select{
+
+    background-color: white;
+    
+}
+
+.form-group :focus{
+
+    border: 1px solid var(--color-yellow-hover);
+        
+}
+
+.errors{
+
+	color: var(--color-red-errors);  
+	width: 400px;
+	padding: 10px;
+	margin: 0 100px;
+	
+}
+
+.form-button{
+
+   width: 95%;
+   padding: 10px;
+   margin: 10px 0;
+   font-size: 16px; 
+   border: none;
+   background-color:var(--color-yellow);
+   color: #fff;
+
+}
+
+.form-button:hover{
+
+    background-color: var(--color-yellow-hover);
+
+}
+
+/*SUCCESSFUL REGISTRATION*/
+
+.successful{
+	
+	height: 50px;
+    margin: 2rem auto;
+	
+}
+
+.successful p{
+	
+	color: var(--color-green);
+    font-size: 20px;
+	
 }
