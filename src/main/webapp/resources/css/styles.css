@@ -1,25 +1,301 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-	height:2000px;
-	margin: 0cm;
-	text-align:center;
-	font-family: 'Poppins', sans-serif;
+:root{
+
+    --color-blue: #00C2FF;
+    --color-blue-hover: #43DBFF;
+    --color-yellow: #ffc107;
+    --color-yellow-hover: #f3b90b;
+    --color-red-errors: #c92432;
+    --color-green: #5dd15d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(253, 250, 244, 0.959);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+.navbar{
+
+    background-color: var(--color-yellow);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+} 
+
+.links{
+
+    display: flex;
+    align-items: center;
+}
+
+.options a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--color-yellow);
 
 }
 
-.cats{
+.options > ul{
 
-	width: 100%;
-	height: 550px;
+    display: flex;
+    /*For the options menu to be completely even, delete the line below*/
+    width: 280px;
+
+}
+
+.options li{
+
+    position: relative;
+    width: 6.5rem;/*or 150px should work*/
+  
+}
+
+.options li:hover .dropdown-menu > li{
+
+    display: block;
+    top: 0;
+
+  }
+
+.dropdown-menu li{
+
+    display: none;
+    position: relative;
+}
+
+.dropdown-menu{
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.options :hover{
+
+    background-color: var(--color-yellow-hover);
+    transition: 0.3s;
+
+}
+
+.dropdown-menu :hover{
+
+    background-color: var(--color-yellow-hover);
+    transition: 0.3s;
+}
+
+.logo{
+
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    margin-left: 30px;
+    margin-right: 10px;
+
+}
+
+.user-register{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.user-register a:hover{
+
+    color: var(--color-blue-hover);
+    transition: 0.3s;
+}
+
+.user-register input[type=text]{
+
+    width: 240px;
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+
+}
+
+input[type=submit]{
+
+    color: white;
+	background-color: var(--color-blue);
+    padding: 8px;
+    margin-right: 8px;
+    border: none;
+	border-radius: 4px;
+    font-size: 18px;
+
+}
+
+input[type=submit]:hover {
+
+    background-color: var(--color-blue-hover);
+}
+
+/*CATS PLAYING IMAGE*/
+
+
+.cats{
+	
+    height: 600px;
 	background-image: url('../imgs/Cats.jpg');
 	background-size: cover;
 	background-position: center;
-	margin-bottom: 30px;
-	padding-bottom: 30px;
-	display: flex;
-	flex-direction:column;
-	align-items: center;
-	justify-content: flex-end;
-	color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    color: white;
+    padding-bottom: 2vh;
+    
+}
 
+/*PRODUCTS SECTION*/
+
+section > h2{
+
+    margin-top: 3vh
+
+}
+
+.media-scroller {
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;    
+}
+
+.media-element{
+
+    padding: 1rem;
+    background: white;
+    /*New Stuff*/
+    margin-top: 3vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 12px;
+    transition: 0.3s;
+
+}
+
+.media-element:hover{
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.media-element > img{
+
+    inline-size: 100%;
+    object-fit: cover;
+    height: 350px;
+    border-radius: 12px;
+
+}
+
+.media-element > h2, h5, p{
+
+    margin: 1rem;
+    text-align: center;
+
+}
+
+.media-element > p{
+
+    color: grey;
+    font-size: 18px;
+    
+}
+
+.icons{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.icons img{
+
+    background-color: var(--color-yellow);
+    width: 55px;
+    height: 55px;
+    padding: .5rem;
+    border-radius: 4px;
+
+}
+
+.icons img:hover{
+
+    background-color: var(--color-yellow-hover);
+}
+
+
+/*FOOTER*/
+
+.container-footer{
+
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    background-color: white;
+
+
+}
+
+.social-links ion-icon {
+
+    width: 50px;
+    height: 50px;
+    color: var(--color-blue);
+    padding: 1rem;
+}
+
+.social-links ion-icon:hover{
+
+    color: var(--color-blue-hover);
 }

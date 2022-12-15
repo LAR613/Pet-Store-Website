@@ -9,82 +9,209 @@
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/styles.css"/>
 
-<!-- Bootstrap -->
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	  rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
-
-<!-- DropDown list libraries -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
-<!-- Bootstrap icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
-<!-- Fonts -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">  
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
-
 </head>
 <body>
 
-<header>
-	<div class="container">
-		<nav class="navbar navbar-expand-lg bg-warning">
-		  <div class="container">
-		    <a class="navbar-brand" href="#">
-		    <img alt="logo" src="${pageContext.request.contextPath}/resources/imgs/Cat logo.png" width="30" height="30">
-		    Pet Store 
-		    </a>
-		    <button class="navbar-toggler" type="button" 
-		    		data-bs-toggle="collapse" 
-		    		data-bs-target="#navbarNavDropdown" 
-		    		aria-controls="navbarNavDropdown" 
-		    		aria-expanded="false" aria-label="Toggle navigation"> 
-		      <span class="navbar-toggler-icon"></span>
-		    </button>
-		    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-		      <ul class="navbar-nav">
-		        <li class="nav-item">
-		          <a class="nav-link active" aria-current="page" href="/">Home</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="#">Food</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="#">Toys</a>
-		        </li>
-		        <li class="nav-item dropdown">
-		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-		            Menu
-		          </a>
-		          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-		            <li><a class="dropdown-item" href="#">Medicine</a></li>
-		            <li><a class="dropdown-item" href="#">Accessories</a></li>
-		            <li><a class="dropdown-item" href="#">About us</a></li>
-		          </ul>
-		        </li>
-		      </ul>
-		    </div>
-		    <a class="nav-link registro" href="formularioUsuario">Login/Register</a>
-		    <form class="d-flex buscador">
-		    	<input type="text" class="form-control me-2">
-		    	<button type="submit" class="btn btn-primary">Search</button>
-		    </form>
-		  </div>
-		</nav>
+<nav class="navbar">
+    <div class="links">
+            <a class="logo" href="">
+                <img alt="logo" src="${pageContext.request.contextPath}/resources/imgs/Cat logo.png" width="30" height="30">
+                Pet Store
+            </a>
+        <div class="options">
+            <ul>
+                <li><a href="/Test">Home</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Toys</a></li>
+                <li><a href="">Menu</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Medicine</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
+    </div>
 
-		<div class="cats">
-			<h2>The best store for your pet</h2>
-		</div>
-	</div>
-</header>
+    <div class="user-register">
+        <a href="userForm">Login/Register</a>
+        <input type="text">
+        <input type="submit" value="Search">
+    </div>
+
+</nav>
+
+<div class="cats">
+      <h2>The best store for your pet</h2>
+</div> 
+
+<section>
+
+    <h2>POPULAR PRODUCTS</h2>
+    
+    <div class="media-scroller">
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/products/Product 1.png" alt="Toy">
+            <h2>Orange ball for dogs</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/products/Product 2.png" alt="Toy">
+            <h2>Red bone for dogs</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/products/Product 3.png" alt="Toy">
+            <h2>Toy black duck - Batman</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/products/Product 4.png" alt="Toy">
+            <h2>Cat scratcher - Black</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/products/Product 5.png"alt="Toy">
+            <h2>Cat scratcher - White</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/products/Product 6.png" alt="Toy">
+            <h2>Cat ladder</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+    </div>
+    
+    <h2>POPULAR FOODS</h2>
+
+    <div class="media-scroller">
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/food/Food 1.png" alt="Pet food">
+            <h2>Butcher's Canned Dog Food</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/food/Food 2.png" alt="Pet food">
+            <h2>Homemade dog biscuits</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/food/Food 3.png" alt="Pet food">
+            <h2>Star croquettes for dogs</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/food/Food 4.png" alt="Pet food">
+            <h2>Cat desserts</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/food/Food 5.png" alt="Pet food">
+            <h2>Dog biscuits</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+        <div class="media-element">
+            <img src="${pageContext.request.contextPath}/resources/imgs/food/Food 6.png"alt="Pet food">
+            <h2>Dog cupcakes</h2>
+            <p>$691850</p>
+            <h5>Taxes included</h5>
+            <div class="icons">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Add Cart.png">
+                <img alt="icon" src="${pageContext.request.contextPath}/resources/imgs/icons/Wishing List.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container-footer">
+        <div>
+            <h3>We're located in:</h3>
+            <p>Medellín, Colombia</p>
+            <p>Cra. 74 #48010, Medellín, Antioquia</p>	
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31727.65245394875!2d-75.59332713184801!3d6.269443959573905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290e4f870f69%3A0xf57f97b59ef52c39!2sEstadio%20de%20F%C3%BAtbol%20Atanasio%20Girardot!5e0!3m2!1ses!2sco!4v1650257915892!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <div>
+            <h3>Customer service</h3><br>
+            <h4>Email</h4>
+            <p>petstore365@company.com</p><br>
+            <h4>PBX</h4>
+            <p>(+57) 604 564 87 78</p><br>
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+            <p>Saturday - Sunday: 8:00 AM - 1:00 PM</p><br>
+            <h4>Follow us!</h4>
+            
+            <div class="social-links">
+                <a href="https://es-la.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://wa.me/573216540987?text=" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </div>
+        </div>
+    </div>
+</footer> 
+
+<!--LINKS FOR SOCIAL MEDIA ICONS-->
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
